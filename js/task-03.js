@@ -12,3 +12,9 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const elmImgList =  images.map((img) => `<li><img style = "width:200px ;" src="${img.url}" alt="${img.alt}"></li>`).join("")
+const gallery = document.querySelector('.gallery');
+console.log(elmImgList)
+gallery.insertAdjacentHTML("afterbegin",elmImgList)
+console.log(gallery)
